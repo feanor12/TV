@@ -7,5 +7,5 @@ if [ $1 ];then
   channels=$userch-user,$channels
 fi
 
-cmd="sudo mplayer -zoom tv:// -tv adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048"
+cmd="sudo mplayer -vf hqdn3d,pp=lb -zoom tv:// -tv adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048"
 exec $cmd
