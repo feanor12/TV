@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<senderliste>
+  <sender>
+    <name>ORF1</name>
+    <frequenz>175250</frequenz>
+  </sender>
+  <sender>
+    <name>ORF2</name>
+    <frequenz>182250</frequenz>
+  </sender>
+  <sender>
+    <name>MEMA TV</name>
+    <frequenz>196250</frequenz>
+  </sender>
+  <sender>
+    <name>SAT.1</name>
+    <frequenz>210250</frequenz>
+  </sender>
+  <sender>
+    <name>Das Erste</name>
+    <frequenz>217250</frequenz>
+  </sender>
+  <sender>
+    <name>BR</name>
+    <frequenz>224250</frequenz>
+  </sender>
+  <sender>
+    <name>ATV</name>
+    <frequenz>168250</frequenz>
+  </sender>
+  <sender>
+    <name>Kabel eins</name>
+    <frequenz>231250</frequenz>
+  </sender>
+  <sender>
+    <name>Steiermark 1</name>
+    <frequenz>238250</frequenz>
+  </sender>
+  <sender>
+    <name>RTL</name>
+    <frequenz>245250</frequenz>
+  </sender>
+  <sender>
+    <name>ZDF</name>
+    <frequenz>252250</frequenz>
+  </sender>
+  <sender>
+    <name>RTL 2</name>
+    <frequenz>259250</frequenz>
+  </sender>
+  <sender>
+    <name>3sat</name>
+    <frequenz>266250</frequenz>
+  </sender>
+  <sender>
+    <name>VOX</name>
+    <frequenz>273250</frequenz>
+  </sender>
+  <sender>
+    <name>Pro7</name>
+    <frequenz>280250</frequenz>
+  </sender>
+  <sender>
+    <name>DSF</name>
+    <frequenz>287250</frequenz>
+  </sender>
+  <sender>
+    <name>CNN</name>
+    <frequenz>294250</frequenz>
+  </sender>
+  <sender>
+    <name>arte</name>
+    <frequenz>303250</frequenz>
+  </sender>
+  <sender>
+    <name>Slovenija 1</name>
+    <frequenz>311250</frequenz>
+  </sender>
+  <sender>
+    <name>HSE24</name>
+    <frequenz>319250</frequenz>
+  </sender>
+  <sender>
+    <name>TV5MONDE EUROPA</name>
+    <frequenz>327250</frequenz>
+  </sender>
+  <sender>
+    <name>Bayern Alpha</name>
+    <frequenz>335250</frequenz>
+  </sender>
+  <sender>
+    <name>Phoenix</name>
+    <frequenz>343250</frequenz>
+  </sender>
+  <sender>
+    <name>gotv</name>
+    <frequenz>351250</frequenz>
+  </sender>
+  <sender>
+    <name>MTV</name>
+    <frequenz>471250</frequenz>
+  </sender>
+  <sender>
+    <name>Nick/Viva</name>
+    <frequenz>479250</frequenz>
+  </sender>
+  <sender>
+    <name>Südwest/BW</name>
+    <frequenz>495250</frequenz>
+  </sender>
+  <sender>
+    <name>super rtl</name>
+    <frequenz>511250</frequenz>
+  </sender>
+  <sender>
+    <name>9 Live</name>
+    <frequenz>519250</frequenz>
+  </sender>
+  <sender>
+    <name>MDR</name>
+    <frequenz>527250</frequenz>
+  </sender>
+  <sender>
+    <name>NDR</name>
+    <frequenz>535250</frequenz>
+  </sender>
+  <sender>
+    <name>WDR</name>
+    <frequenz>543250</frequenz>
+  </sender>
+  <sender>
+    <name>KIKA</name>
+    <frequenz>551250</frequenz>
+  </sender>
+  <sender>
+    <name>hessen fernsehn</name>
+    <frequenz>559250</frequenz>
+  </sender>
+  <sender>
+    <name>RAI uno</name>
+    <frequenz>567250</frequenz>
+  </sender>
+  <sender>
+    <name>Eurosport</name>
+    <frequenz>575250</frequenz>
+  </sender>
+  <sender>
+    <name>Das Vierte</name>
+    <frequenz>583250</frequenz>
+  </sender>
+  <sender>
+    <name>EuroNews</name>
+    <frequenz>591250</frequenz>
+  </sender>
+  <sender>
+    <name>TW1</name>
+    <frequenz>847250</frequenz>
+  </sender>
+  <sender>
+    <name>QVC</name>
+    <frequenz>885250</frequenz>
+  </sender>
+</senderliste>
