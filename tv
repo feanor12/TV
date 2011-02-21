@@ -1,6 +1,8 @@
 #!/bin/sh
 
-channels="210250-sat1,245250-rtl,259250-rtl2,280250-pro7,175250-orf1,182250-orf2,231250-kabel1,471250-mtv,273250-vox,217250-ard,266250-3sat"
+channels=R6-ch1,SR11-ch2,SR18-ch3,E6-ch4,E7-ch5,E8-ch6,E9-ch7,E10-ch8,E11-ch9,E12-ch10,SE9-ch11,SE12-ch12,SE13-ch13,SE14-ch14,SE15-ch15,SE16-ch16,SE17-ch17,SE18-ch18,SE20-ch19,S21-ch20,S22-ch21,S23-ch22,S24-ch23,S25-ch24,S26-ch25,S27-ch26,S33-ch27,21-ch28,22-ch29,24-ch30,25-ch31,26-ch32,27-ch33,29-ch34,30-ch35,31-ch36,32-ch37,33-ch38,34-ch39,35-ch40,36-ch41,41-ch42,68-ch43,69-ch44
+
+#channels="210250-sat1,245250-rtl,259250-rtl2,280250-pro7,175250-orf1,182250-orf2,231250-kabel1,471250-mtv,273250-vox,217250-ard,266250-3sat"
 if [ $1 ];then
   userch=`grep -i -A1 $1 /usr/share/tv/tv.xml|tail -n1`
   userch=${userch:14:6}
