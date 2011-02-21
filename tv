@@ -2,7 +2,7 @@
 
 channels="210250-sat1,245250-rtl,259250-rtl2,280250-pro7,175250-orf1,182250-orf2,231250-kabel1,471250-mtv,273250-vox,217250-ard,266250-3sat"
 if [ $1 ];then
-  userch=`grep -i -A1 $1 ~/docs/tv.xml|tail -n1`
+  userch=`grep -i -A1 $1 /usr/share/tv/tv.xml|tail -n1`
   userch=${userch:14:6}
   channels=$userch-user,$channels
 fi
