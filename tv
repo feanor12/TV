@@ -1,9 +1,31 @@
 #!/bin/sh
 
-#mplayer -tvscan autostart tv://
-#UPC Graz
-channels="R6-ORF1,SR11-kabel1,SR18-sport1,E6-orf2,E7-puls4,E8-mema,E9-ch7,E10-sat1,E11-erste,E12-br,SE9-3sat,SE12-stmk1,SE13-rtl,SE14-zdf,SE15-rtl2,SE16-ch16,SE17-vox,SE18-pro7,SE20-cnn,S21-arte,S22-slo1,S23-ch22,S24-tv5,S25-ch24,S26-phönix,S27-gotv,S33-tw1,21-viva,22-comedy,24-ch30,25-ntv,26-ch32,27-ch33,29-ch34,30-wdr,31-kika,32-ch37,33-rai1,34-eurosport,35-servus,36-ch41,41-ch42,68-tw1,69-ch44"
+if [ "$1" = "-help" ];then
+  echo "usage: tv <channel name> <mplayer options>"
+  exit
+fi
 
-cmd="sudo mplayer -zoom tv://$1 -tv adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048 -vo xv $2"
+echo "Checking for ~/.tv"
+if [ -f ~/.tv ];then
+  #mplayer -tvscan autostart tv://
+  #UPC Graz
+  #channels="R6-ORF1,SR11-kabel1,SR18-sport1,E6-orf2,E7-puls4,E8-mema,E9-ch7,E10-sat1,E11-erste,E12-br,SE9-3sat,SE12-stmk1,SE13-rtl,SE14-zdf,SE15-rtl2,SE16-ch16,SE17-vox,SE18-pro7,SE20-cnn,S21-arte,S22-slo1,S23-ch22,S24-tv5,S25-ch24,S26-phönix,S27-gotv,S33-tw1,21-viva,22-comedy,24-ch30,25-ntv,26-ch32,27-ch33,29-ch34,30-wdr,31-kika,32-ch37,33-rai1,34-eurosport,35-servus,36-ch41,41-ch42,68-tw1,69-ch44"
+  echo "...Found"
+  eval `cat ~/.tv`
+fi
 
+if [ "$channels" = "" ];then
+  echo "Scanning Channels ..."
+  mplayer -tvscan autostart tv:// 2>/dev/null | 
+  while read -r line; do
+    if [[ $line = channels=* ]]; then 
+      echo "Saving Channels"
+      echo $line > ~/.tv
+      exit
+    fi
+    echo $line | grep channel
+  done
+fi
+
+cmd="mplayer -zoom tv://$1 -tv tdevice=/dev/vbi0:adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048 -vo xv $2"
 exec $cmd
