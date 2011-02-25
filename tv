@@ -1,14 +1,9 @@
 #!/bin/sh
 
 #mplayer -tvscan autostart tv://
-channels=R6-ch1,SR11-ch2,SR18-ch3,E6-ch4,E7-ch5,E8-ch6,E9-ch7,E10-ch8,E11-ch9,E12-ch10,SE9-ch11,SE12-ch12,SE13-ch13,SE14-ch14,SE15-ch15,SE16-ch16,SE17-ch17,SE18-ch18,SE20-ch19,S21-ch20,S22-ch21,S23-ch22,S24-ch23,S25-ch24,S26-ch25,S27-ch26,S33-ch27,21-ch28,22-ch29,24-ch30,25-ch31,26-ch32,27-ch33,29-ch34,30-ch35,31-ch36,32-ch37,33-ch38,34-ch39,35-ch40,36-ch41,41-ch42,68-ch43,69-ch44
-#channels="210250-sat1,245250-rtl,259250-rtl2,280250-pro7,175250-orf1,182250-orf2,231250-kabel1,471250-mtv,273250-vox,217250-ard,266250-3sat"
+#UPC Graz
+channels="R6-ORF1,SR11-kabel1,SR18-sport1,E6-orf2,E7-puls4,E8-mema,E9-ch7,E10-sat1,E11-erste,E12-br,SE9-3sat,SE12-stmk1,SE13-rtl,SE14-zdf,SE15-rtl2,SE16-ch16,SE17-vox,SE18-pro7,SE20-cnn,S21-arte,S22-slo1,S23-ch22,S24-tv5,S25-ch24,S26-phönix,S27-gotv,S33-tw1,21-viva,22-comedy,24-ch30,25-ntv,26-ch32,27-ch33,29-ch34,30-wdr,31-kika,32-ch37,33-rai1,34-eurosport,35-servus,36-ch41,41-ch42,68-tw1,69-ch44"
 
-if [ $1 ];then
-  userch=`grep -i -A1 $1 /usr/share/tv/tv.xml|tail -n1`
-  userch=${userch:14:6}
-  channels=$userch-user,$channels
-fi
+cmd="sudo mplayer -zoom tv://$1 -tv adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048 -vo xv $2"
 
-cmd="sudo mplayer -vf hqdn3d,pp=lb -zoom tv:// -tv adevice=/dev/audio2:immediatemode=0:audiorate=32000:channels=\"$channels\" -ao alsa -cache 4048"
 exec $cmd
